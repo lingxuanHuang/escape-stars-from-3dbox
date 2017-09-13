@@ -1,0 +1,263 @@
+@import "mixns";
+@import "variable";
+@import "animation.css";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: @mBgColor
+}
+
+#main3d {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.step1, .step2, .step3, .step4 {
+  position: absolute;
+  top: 220px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 160px;
+  height: 24px;
+  transform-style: preserve-3d;
+  animation: cubedes 15s infinite linear;
+  transform: scale(0);
+  text-align: center;
+
+}
+
+.step2 {
+  animation-delay: 2.5s
+}
+
+.step3 {
+  animation-delay: 5s
+}
+
+.step4 {
+  animation-delay: 7.5s
+}
+
+.sight {
+  perspective: 800px;
+  transform: scale(0.5);
+  color: #FFF;
+
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.cube {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: cuberotate 10s infinite linear;
+  div {
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .front {
+    transform: translateZ(100px);
+  }
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+  .right {
+    transform: translateX(100px) rotateY(-90deg);
+  }
+  .left {
+    transform: translateX(-100px) rotateY(-90deg);
+  }
+  .top {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+  .bottom {
+    transform: translateY(100px) rotateX(-90deg);
+  }
+
+}
+
+#main3d .starry div {
+  width: 14px;
+  height: 14px;
+  background: url("../Img/star.svg") no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;;
+  opacity: 1;
+  animation: star1 2s infinite linear;
+  transition: all 1.5s ease-out;
+}
+
+#main3d .starry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: starryRotate 50s 5s infinite linear;
+
+  :nth-child(3n-1) {
+    animation-delay: 0.3s;
+    width: 8px;
+    height: 8px;
+  }
+  :nth-child(4n-1) {
+    animation-delay: 0.6s;
+    width: 14px;
+    height: 14px;
+  }
+  :nth-child(7n-1) {
+    animation-delay: 1s;
+    width: 16px;
+    height: 16px;
+  }
+  :nth-child(11n-1) {
+    animation-delay: 1.5s;
+    width: 24px;
+    height: 24px;
+  }
+  :nth-child(1) {
+    .starryMixn(5%, 5%, -40px 4px, 0.5s);
+  }
+  :nth-child(2) {
+    .starryMixn(20%, 10%, -10px 30px, 1s);
+  }
+  :nth-child(3) {
+    .starryMixn(53%, 30%, -20px 10px, 1.5s);
+  }
+  :nth-child(4) {
+    .starryMixn(80%, 90%, 10px -40px, 2s);
+  }
+  :nth-child(5) {
+    .starryMixn(45%, 45%, 0px -10px, 2.5s);
+  }
+  :nth-child(6) {
+    .starryMixn(21%, 75%, -50px -17px, 3s);
+  }
+  :nth-child(7) {
+    .starryMixn(35%, 65%, -7px 9px, 3.5s);
+  }
+  :nth-child(8) {
+    .starryMixn(52%, 75%, 30px 7px, 4s);
+  }
+  :nth-child(9) {
+    .starryMixn(88%, 25%, -45px 0px, 4.5s);
+  }
+  :nth-child(10) {
+    .starryMixn(35%, 55%, -1px 10px, 5s);
+  }
+  :nth-child(11) {
+    .starryMixn(18%, 72%, -25px 15px, 5.5s);
+  }
+  :nth-child(12) {
+    .starryMixn(92%, 25%, -5px 28px, 6s);
+  }
+  :nth-child(13) {
+    .starryMixn(61%, 33%, -8px -48px, 6.5s);
+  }
+  :nth-child(14) {
+    .starryMixn(12%, 47%, -18px -4px, 7s);
+  }
+  :nth-child(15) {
+    .starryMixn(62%, 63%, -43px -30px, 7.5s);
+  }
+  :nth-child(16) {
+    .starryMixn(42%, 82%, -23px -30px, 8s);
+  }
+  :nth-child(17) {
+    .starryMixn(83%, 19%, -9px 20px, 8.5s);
+  }
+  :nth-child(18) {
+    .starryMixn(33%, 35%, 13px 27px, 9s);
+  }
+  :nth-child(19) {
+    .starryMixn(30%, 03%, 19px -21px, 0.3s);
+  }
+  :nth-child(20) {
+    .starryMixn(64%, 10%, 24px -8px, 1.8s);
+  }
+  :nth-child(21) {
+    .starryMixn(16%, 16%, -22px -20px, 2.2s);
+  }
+  :nth-child(22) {
+    .starryMixn(25%, 40%, 20px -30px, 2.7s);
+  }
+  :nth-child(23) {
+    .starryMixn(18%, 28%, -12px -3px, 3.3s);
+  }
+  :nth-child(24) {
+    .starryMixn(44%, 30%, 10px -21px, 3.9s);
+  }
+  :nth-child(25) {
+    .starryMixn(34%, 20%, 16px 1px, 4.2s);
+  }
+  :nth-child(26) {
+    .starryMixn(88%, 53%, 26px, -50px, 4.7s);
+  }
+  :nth-child(27) {
+    .starryMixn(81%, 37%, -30px -20px, 4.3s);
+  }
+  :nth-child(28) {
+    .starryMixn(76%, 75%, 4px -7px, 5.8s);
+  }
+  :nth-child(29) {
+    .starryMixn(64%, 49%, -29px -3px, 6.2s);
+  }
+  :nth-child(30) {
+    .starryMixn(74%, 51%, -10px -20px, 6.7s);
+  }
+}
+
+#main3d .starry.active {
+  div {
+    top: 50%;
+    left: 50%;
+  }
+  + .cube {
+    opacity: 1;
+    &:before {
+      opacity: 0.6;
+    }
+  }
+
+}
+
+#play {
+  position: absolute;
+  bottom: 20px;
+  left: -40px;
+  margin-left: 50%;
+  width: 80px;
+  height: 30px;
+  background: #FFF;
+  border: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,394 @@
+@import "animation.css";
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+}
+#main3d {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+.step1,
+.step2,
+.step3,
+.step4 {
+  position: absolute;
+  top: 220px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 160px;
+  height: 24px;
+  transform-style: preserve-3d;
+  animation: cubedes 15s infinite linear;
+  transform: scale(0);
+  text-align: center;
+}
+.step2 {
+  animation-delay: 2.5s;
+}
+.step3 {
+  animation-delay: 5s;
+}
+.step4 {
+  animation-delay: 7.5s;
+}
+.sight {
+  perspective: 800px;
+  transform: scale(0.5);
+  color: #FFF;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.cube {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: cuberotate 10s infinite linear;
+}
+.cube div {
+  position: absolute;
+  text-align: center;
+  line-height: 200px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.cube .front {
+  transform: translateZ(100px);
+}
+.cube .back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.cube .right {
+  transform: translateX(100px) rotateY(-90deg);
+}
+.cube .left {
+  transform: translateX(-100px) rotateY(-90deg);
+}
+.cube .top {
+  transform: translateY(-100px) rotateX(90deg);
+}
+.cube .bottom {
+  transform: translateY(100px) rotateX(-90deg);
+}
+#main3d .starry div {
+  width: 14px;
+  height: 14px;
+  background: url("../Img/star.svg") no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  opacity: 1;
+  animation: star1 2s infinite linear;
+  transition: all 1.5s ease-out;
+}
+#main3d .starry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: starryRotate 50s 5s infinite linear;
+}
+#main3d .starry :nth-child(3n-1) {
+  animation-delay: 0.3s;
+  width: 8px;
+  height: 8px;
+}
+#main3d .starry :nth-child(4n-1) {
+  animation-delay: 0.6s;
+  width: 14px;
+  height: 14px;
+}
+#main3d .starry :nth-child(7n-1) {
+  animation-delay: 1s;
+  width: 16px;
+  height: 16px;
+}
+#main3d .starry :nth-child(11n-1) {
+  animation-delay: 1.5s;
+  width: 24px;
+  height: 24px;
+}
+#main3d .starry :nth-child(1) {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  opacity: 0.5;
+  margin: -40px 4px;
+  transition-delay: 3.5s;
+}
+#main3d .starry :nth-child(2) {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  opacity: 0.5;
+  margin: -10px 30px;
+  transition-delay: 4s;
+}
+#main3d .starry :nth-child(3) {
+  position: absolute;
+  left: 53%;
+  top: 30%;
+  opacity: 0.5;
+  margin: -20px 10px;
+  transition-delay: 4.5s;
+}
+#main3d .starry :nth-child(4) {
+  position: absolute;
+  left: 80%;
+  top: 90%;
+  opacity: 0.5;
+  margin: 10px -40px;
+  transition-delay: 5s;
+}
+#main3d .starry :nth-child(5) {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  opacity: 0.5;
+  margin: 0px -10px;
+  transition-delay: 5.5s;
+}
+#main3d .starry :nth-child(6) {
+  position: absolute;
+  left: 21%;
+  top: 75%;
+  opacity: 0.5;
+  margin: -50px -17px;
+  transition-delay: 6s;
+}
+#main3d .starry :nth-child(7) {
+  position: absolute;
+  left: 35%;
+  top: 65%;
+  opacity: 0.5;
+  margin: -7px 9px;
+  transition-delay: 6.5s;
+}
+#main3d .starry :nth-child(8) {
+  position: absolute;
+  left: 52%;
+  top: 75%;
+  opacity: 0.5;
+  margin: 30px 7px;
+  transition-delay: 7s;
+}
+#main3d .starry :nth-child(9) {
+  position: absolute;
+  left: 88%;
+  top: 25%;
+  opacity: 0.5;
+  margin: -45px 0px;
+  transition-delay: 7.5s;
+}
+#main3d .starry :nth-child(10) {
+  position: absolute;
+  left: 35%;
+  top: 55%;
+  opacity: 0.5;
+  margin: -1px 10px;
+  transition-delay: 8s;
+}
+#main3d .starry :nth-child(11) {
+  position: absolute;
+  left: 18%;
+  top: 72%;
+  opacity: 0.5;
+  margin: -25px 15px;
+  transition-delay: 8.5s;
+}
+#main3d .starry :nth-child(12) {
+  position: absolute;
+  left: 92%;
+  top: 25%;
+  opacity: 0.5;
+  margin: -5px 28px;
+  transition-delay: 9s;
+}
+#main3d .starry :nth-child(13) {
+  position: absolute;
+  left: 61%;
+  top: 33%;
+  opacity: 0.5;
+  margin: -8px -48px;
+  transition-delay: 9.5s;
+}
+#main3d .starry :nth-child(14) {
+  position: absolute;
+  left: 12%;
+  top: 47%;
+  opacity: 0.5;
+  margin: -18px -4px;
+  transition-delay: 10s;
+}
+#main3d .starry :nth-child(15) {
+  position: absolute;
+  left: 62%;
+  top: 63%;
+  opacity: 0.5;
+  margin: -43px -30px;
+  transition-delay: 10.5s;
+}
+#main3d .starry :nth-child(16) {
+  position: absolute;
+  left: 42%;
+  top: 82%;
+  opacity: 0.5;
+  margin: -23px -30px;
+  transition-delay: 11s;
+}
+#main3d .starry :nth-child(17) {
+  position: absolute;
+  left: 83%;
+  top: 19%;
+  opacity: 0.5;
+  margin: -9px 20px;
+  transition-delay: 11.5s;
+}
+#main3d .starry :nth-child(18) {
+  position: absolute;
+  left: 33%;
+  top: 35%;
+  opacity: 0.5;
+  margin: 13px 27px;
+  transition-delay: 12s;
+}
+#main3d .starry :nth-child(19) {
+  position: absolute;
+  left: 30%;
+  top: 3%;
+  opacity: 0.5;
+  margin: 19px -21px;
+  transition-delay: 3.3s;
+}
+#main3d .starry :nth-child(20) {
+  position: absolute;
+  left: 64%;
+  top: 10%;
+  opacity: 0.5;
+  margin: 24px -8px;
+  transition-delay: 4.8s;
+}
+#main3d .starry :nth-child(21) {
+  position: absolute;
+  left: 16%;
+  top: 16%;
+  opacity: 0.5;
+  margin: -22px -20px;
+  transition-delay: 5.2s;
+}
+#main3d .starry :nth-child(22) {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  opacity: 0.5;
+  margin: 20px -30px;
+  transition-delay: 5.7s;
+}
+#main3d .starry :nth-child(23) {
+  position: absolute;
+  left: 18%;
+  top: 28%;
+  opacity: 0.5;
+  margin: -12px -3px;
+  transition-delay: 6.3s;
+}
+#main3d .starry :nth-child(24) {
+  position: absolute;
+  left: 44%;
+  top: 30%;
+  opacity: 0.5;
+  margin: 10px -21px;
+  transition-delay: 6.9s;
+}
+#main3d .starry :nth-child(25) {
+  position: absolute;
+  left: 34%;
+  top: 20%;
+  opacity: 0.5;
+  margin: 16px 1px;
+  transition-delay: 7.2s;
+}
+#main3d .starry :nth-child(26) {
+  position: absolute;
+  left: 88%;
+  top: 53%;
+  opacity: 4.7s;
+  margin: 26px;
+  transition-delay: -47px;
+}
+#main3d .starry :nth-child(27) {
+  position: absolute;
+  left: 81%;
+  top: 37%;
+  opacity: 0.5;
+  margin: -30px -20px;
+  transition-delay: 7.3s;
+}
+#main3d .starry :nth-child(28) {
+  position: absolute;
+  left: 76%;
+  top: 75%;
+  opacity: 0.5;
+  margin: 4px -7px;
+  transition-delay: 8.8s;
+}
+#main3d .starry :nth-child(29) {
+  position: absolute;
+  left: 64%;
+  top: 49%;
+  opacity: 0.5;
+  margin: -29px -3px;
+  transition-delay: 9.2s;
+}
+#main3d .starry :nth-child(30) {
+  position: absolute;
+  left: 74%;
+  top: 51%;
+  opacity: 0.5;
+  margin: -10px -20px;
+  transition-delay: 9.7s;
+}
+#main3d .starry.active div {
+  top: 50%;
+  left: 50%;
+}
+#main3d .starry.active + .cube {
+  opacity: 1;
+}
+#main3d .starry.active + .cube:before {
+  opacity: 0.6;
+}
+#play {
+  position: absolute;
+  bottom: 20px;
+  left: -40px;
+  margin-left: 50%;
+  width: 80px;
+  height: 30px;
+  background: #FFF;
+  border: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
+}
